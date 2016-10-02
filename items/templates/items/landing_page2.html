@@ -1,0 +1,10 @@
+{% extends 'items/base.html' %}
+{% load staticfiles %}
+
+{% block body_block %}
+<form method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit" value="submit">submit</button>
+</form>
+{% endblock %}
